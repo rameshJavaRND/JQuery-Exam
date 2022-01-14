@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .container-fluid {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow: hidden;
+  }
+
+  .heading h2{
+      margin-left: 1%;
+  }
+
+
+  .nav {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
+    background-color: #464343;
+  }
+  
+  .active {
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    background-color: #04AA6D;
+  }
+
+  .btn-primary {
+    background-color: #4181ac;
+    border: none;
+    outline: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #000000;
+  }
+
+  .btn-secondary {
+    background-color: #494949;
+    border: none;
+    outline: none;
+  }
+
+  .btn-secondary:hover {
+    background-color: #000000;
+  }
+
+  .modal-body input {
+    padding: 5px 10px;
+  }
+
+  .newcontact-btn {
+    padding: 4px 10px;
+    outline: none;
+    border: none;
+    background-color: #464343;
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+    float: right;
+    margin-right: 2%;
+  }
+
+  .newcontact-btn:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    background-color: #111;
+  }
+
+  .logoutb {
+    padding: 0 15px;
+    outline: none;
+    border: none;
+    background-color: #464343;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .logoutb:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    background-color: #111;
+  }
+
+  .contact-thead {
+    color: #111;
+    padding: 8px;
+  }
+
+  .fa-edit {
+    color: #fff;
+    background-color: #1c8d18;
+    cursor: pointer;
+    padding: 1%;
+  }
+  
+  .fa-edit:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+  }
+  
+  .fa-window-close {
+    color: #f34832;
+    cursor: pointer;
+    padding: 2%;
+  }
+  
+  .fa-window-close:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+  }
+
+  a {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  a:hover:not(.active) {
+    color: #fff;
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    background-color: #111;
+  }
+
+  i {
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .searchbar{
+    padding: 20px 20px;
+    margin-left: 1%;
+  }
+  
+  .modal-body input{
+    margin: 1%;
+  }
+
+  .error-msg{
+      color: #ff2727;
+      font-weight: bold;
+      font-size: 12px;
+      opacity: 0;
+  }
+  

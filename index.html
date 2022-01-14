@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>Personal Contact</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- Navigation-bar -->
+        <div class="row">
+          <ul class="nav">
+  
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home"></i>Home</a>
+            </li>
+  
+            <li class="nav-item">
+                <a class="nav-link" onclick="searcherror()" id="search-id" style="color:#fff;"><i class="fas fa-search"></i>Search</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" onclick="contacterror()" id="contact-id" style="color:#fff;"><i class="fas fa-envelope"></i>Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id=loginb data-toggle="modal" data-target="#exampleModal" style="color:#fff;"><i class="fa fa-user"></i>Login</a>
+            </li>
+  
+          </ul>
+        </div>
+
+        <!-- Home page heading -->
+        <div class="heading mt-5">
+            <h2 id="home-heading"></h2>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <input type="text" id="email" placeholder="Enter your Email"/><span class="error-msg err-email">Cannot be empty</span>
+                <input type="password" id="password" placeholder="Enter your Password"/><span class="error-msg err-password">Cannot be empty</span>
+              </div>
+
+              <div class="modal-footer" style="margin-right: 33%;"> 
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="add-btn">Login</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    function contacterror()
+    { 
+        var w = window.open('','','width=200,height=100');
+        w.document.write('User must login for displaying contacts!!');
+        w.focus();
+        setTimeout(function() {w.close();}, 5000);
+    }
+    function searcherror()
+    { 
+        var x = window.open('','','width=200,height=100');
+        x.document.write('User must login to search for contacts!!');
+        x.focus();
+        setTimeout(function() {x.close();}, 3000);
+    }
+</script>
+
+</html>

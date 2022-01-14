@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Info</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Navbar -->
+        <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="indexlogin.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#search" id="contact-id"><i class="fas fa-search"></i>Search</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fas fa-envelope"></i>Contact</a>
+          </li>
+
+          <button class="logoutb"><i class="fa fa-user" style="color:#fff;"></i>Logout</button>
+          
+        </ul>
+      </div>
+
+      <div class="heading mt-5">
+        <h2 id="home-heading"></h2>
+      </div>
+
+      <!-- Add contact -->
+      <div class="contact-heading mt-3">
+        <div class="searchbar">
+          <input type="text" placeholder="Search. ." class="pl-1 ml-2" id="search"/>
+          <button class="newcontact-btn" id=addcontactb data-toggle="modal" data-target="#exampleModal">New contact  <i class="fa fa-address-book"></i></button>
+        </div>
+      </div>
+
+      <!-- New contact addition Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add new contact</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <input type="text" placeholder="First name" id="fname" required /><span class="error-msg err-fname">Cannot be empty</span>
+              <input type="text" placeholder="Last name" id="lname" required /><span class="error-msg err-lname">Cannot be empty</span>
+              <input type="email" placeholder="E-mail " id="emailId" required /><span class="error-msg err-email">Cannot be empty</span>
+              <input type="number" placeholder="Mobile no." id="mobno" required /><span class="error-msg err-mobno">Cannot be empty</span>
+              <input type="text" placeholder="City" id="city" required /><span class="error-msg err-city">Cannot be empty</span>
+            </div>
+
+            <div class="modal-footer" style="margin-right: 25%;">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" id="contact-btn" data-dismiss="modal">Add Contact</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="table-box text-center mt-5">
+        <table style="width: 95%; margin-left:auto; margin-right:auto;">
+
+          <thead class="contact-thead" style="background-color: #f0f0f0; border: 1px solid #cccccc">
+            <tr>
+              <th>S.No</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Mobile</th>
+              <th>Email</th>
+              <th>City</th>
+              <th>Edit | Delete</th>
+            </tr>
+          </thead>
+
+          <tbody id="table-body">
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
